@@ -48,12 +48,12 @@ with open('R_test.txt', 'r', encoding='utf-8') as f:
 
 for pos in [pku, thu, han]:
     t1 = time.time()
-    with open(str(pos) + '.txt', 'w', encoding='utf-8') as f:
+    with open(pos.__name__ + '.txt', 'w', encoding='utf-8') as f:
         for line in lines:
             f.write(str(pos(line)) + '\n')
         t2 = time.time()
-        print(str(pos) + "用时：" + str(t2 - t1))
-        f.write(str(pos) + "用时：" + str(t2 - t1))
+        print(pos.__name__ + "用时：" + str(t2 - t1))
+        f.write(pos.__name__ + "用时：" + str(t2 - t1))
 
 if __name__ == '__main__':
     pass
