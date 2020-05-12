@@ -46,7 +46,7 @@ def han(line):
 with open('R_test.txt', 'r', encoding='utf-8') as f:
     lines = [line.strip() for line in f.readlines() if line.strip()]
 
-for pos in [pku, thu, han]:
+for pos in [han]:
     t1 = time.time()
     with open(pos.__name__ + '.txt', 'w', encoding='utf-8') as f:
         for line in lines:
