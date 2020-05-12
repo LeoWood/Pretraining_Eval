@@ -25,7 +25,7 @@ def han(line):
     return [(term.word,term.nature) for term in hanlp_resut]
 
 
-from stanfordcorenlp import StanfordCoreNlp
+from stanfordcorenlp import StanfordCoreNLP
 stanford_nlp = StanfordCoreNlp(r'F:\LiuHuan\stanford-corenlp-4.0.0',lang='zh')
 def stanford(line):
     stanford_resut = stanford_nlp.pos_tag(line)
