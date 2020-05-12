@@ -33,20 +33,20 @@ def han(line):
     return [(term.word, term.nature) for term in hanlp_resut]
 
 
-from stanfordcorenlp import StanfordCoreNLP
+# from stanfordcorenlp import StanfordCoreNLP
+#
+# stanford_nlp = StanfordCoreNLP(r'F:\LiuHuan\stanford-corenlp-4.0.0', lang='zh')
 
-stanford_nlp = StanfordCoreNLP(r'F:\LiuHuan\stanford-corenlp-4.0.0', lang='zh')
 
-
-def stanford(line):
-    stanford_resut = stanford_nlp.pos_tag(line)
-    return [(word, tag) for (word, tag) in stanford_resut]
+# def stanford(line):
+#     stanford_resut = stanford_nlp.pos_tag(line)
+#     return [(word, tag) for (word, tag) in stanford_resut]
 
 
 with open('R_test.txt', 'r', encoding='utf-8') as f:
     lines = [line.strip() for line in f.readlines() if line.strip()]
 
-for pos in [pku, thu, han, stanford]:
+for pos in [pku, thu, han]:
     t1 = time.time()
     with open(str(pos) + '.txt', 'w', encoding='utf-8') as f:
         for line in lines:
