@@ -7,7 +7,7 @@ import time
 
 import pkuseg
 
-pku_seg = pkuseg.pkuseg(model_name='medicine', postag=True)
+pku_seg = pkuseg.pkuseg(postag=True)
 
 
 def pku(line):
@@ -46,9 +46,9 @@ def han(line):
 with open('R_test.txt', 'r', encoding='utf-8') as f:
     lines = [line.strip() for line in f.readlines() if line.strip()]
 
-for pos in [han]:
+for pos in [pku]:
     t1 = time.time()
-    with open(pos.__name__ + '.txt', 'w', encoding='utf-8') as f:
+    with open(pos.__name__ + '_mix.txt', 'w', encoding='utf-8') as f:
         for line in lines:
             f.write(str(pos(line)) + '\n')
         t2 = time.time()
