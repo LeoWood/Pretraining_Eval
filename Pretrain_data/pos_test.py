@@ -29,7 +29,7 @@ from pyhanlp import HanLP
 
 
 def han(line):
-    hanlp_resut = HanLP(line)
+    hanlp_resut = HanLP.segment(line)
     return [(term.word, term.nature) for term in hanlp_resut]
 
 
