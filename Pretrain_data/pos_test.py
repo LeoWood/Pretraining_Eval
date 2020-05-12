@@ -35,7 +35,7 @@ def han(line):
 
 from stanfordcorenlp import StanfordCoreNLP
 
-stanford_nlp = StanfordCoreNlp(r'F:\LiuHuan\stanford-corenlp-4.0.0', lang='zh')
+stanford_nlp = StanfordCoreNLP(r'F:\LiuHuan\stanford-corenlp-4.0.0', lang='zh')
 
 
 def stanford(line):
