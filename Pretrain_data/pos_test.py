@@ -7,7 +7,7 @@ import time
 
 import pkuseg
 
-pku_seg = pkuseg.pkuseg(postag=True)
+pku_seg = pkuseg.pkuseg(model_name='medicine',user_dict = r'F:\LiuHuan\Projects\UER-py\uer\utils\medical_terms\MedicalTerms(MeSH+Meddical_KG).txt',postag=True)
 
 
 def pku(line):
@@ -15,22 +15,22 @@ def pku(line):
     return [(word, tag) for (word, tag) in pku_result]
 
 
-import thulac
-
-thup = thulac.thulac()
-
-
-def thu(line):
-    thulac_result = thup.cut(line)
-    return [(word, tag) for (word, tag) in thulac_result]
-
-
-from pyhanlp import HanLP
-
-
-def han(line):
-    hanlp_resut = HanLP.segment(line)
-    return [(term.word, term.nature) for term in hanlp_resut]
+# import thulac
+#
+# thup = thulac.thulac()
+#
+#
+# def thu(line):
+#     thulac_result = thup.cut(line)
+#     return [(word, tag) for (word, tag) in thulac_result]
+#
+#
+# from pyhanlp import HanLP
+#
+#
+# def han(line):
+#     hanlp_resut = HanLP.segment(line)
+#     return [(term.word, term.nature) for term in hanlp_resut]
 
 
 # from stanfordcorenlp import StanfordCoreNLP
