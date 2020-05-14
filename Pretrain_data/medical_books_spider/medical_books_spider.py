@@ -33,12 +33,11 @@ if __name__ == '__main__':
     driver = get_driver()
     i = 0
     for title,link in books_pCls:
-        i += 1
         if not os.path.exists(title):
             os.mkdir(title)
         with open(title + '.txt','w',encoding='utf-8') as fw:
             driver.get(link)
-            time.sleep(1)
+            time.sleep(random.randint(1,5))
 
             # 存源代码
             soup = BeautifulSoup(driver.page_source,"html.parser")
@@ -54,7 +53,8 @@ if __name__ == '__main__':
             go_on.click()
 
             while True:
-                time.sleep(1)
+                i += 1
+                time.sleep(random.randint(1,5))
 
                 # 存源代码
                 soup = BeautifulSoup(driver.page_source, "html.parser")
