@@ -1,0 +1,12 @@
+内科疾病鉴别诊断学	https://yixueshu.gitee.io/nkjb/text00009.html
+急诊内科学	https://yixueshu.gitee.io/jznk/text00008.html
+实用糖尿病学	https://yixueshu.gitee.io/sytnbx/text00006.html
+实用遗传代谢学	https://yixueshu.gitee.io/ycdxbx/text00005.html#CHP1
+消化内科学	https://wodeshu.gitee.io/xhnkx/text00010.html#CHP1
+肾内科学	https://wodeshu.gitee.io/snkx/text00010.html#CHP1
+儿内科疾病临床诊疗思维	https://yixueshu.gitee.io/enksw/text00007.html
+急诊科疾病临床诊疗思维	https://yixueshu.gitee.io/jzksw/text00006.html#CHP1
+消化内科疾病临床诊疗思维	https://yixueshu.gitee.io/xhnksw/text00005.html#CHP1
+实用新生儿学	https://yixueshu.gitee.io/xse/text00008.html#CHP1
+儿科急诊医学	https://yixueshu.gitee.io/ekjz/text00006.html
+康复医学	https://yixueshu.gitee.io/kfyx/text00005.html
