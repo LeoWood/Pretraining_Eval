@@ -33,7 +33,7 @@ def pCls():
         if not os.path.exists(title):
             os.mkdir(title)
         with open(title + '.txt', 'w', encoding='utf-8') as fw:
-            driver.get(link)
+            driver.get('https://yixueshu.gitee.io/sytnbx/text00025.html')
             time.sleep(random.randint(1, 5))
 
             # 存源代码
@@ -43,7 +43,8 @@ def pCls():
 
             # 存正文内容
             for p in soup.find_all('div', class_='pCls'):
-                fw.write(p.get_text() + '\n')
+                fw.write(p.get_text().strip().replace('\n','') + '\n')
+
 
             go_on = driver.find_element_by_xpath('//button[@onclick="nextPage()"]')
             go_on.click()
@@ -57,9 +58,14 @@ def pCls():
                 source_file = title + '/' + str(i) + '.html'
                 page_to_txt(source_file, soup.prettify())
 
+                ## 去参考文献
+                cite = driver.find_elements_by_xpath('//div[@class="h4" and contains(text(),"参考文献")]')
+                if cite:
+                    continue
+
                 # 存正文内容
                 for p in soup.find_all('div', class_='pCls'):
-                    fw.write(p.get_text() + '\n')
+                    fw.write(p.get_text().strip().replace('\n','') + '\n')
 
                 try:
                     go_on = driver.find_element_by_xpath('//button[@onclick="nextPage()"]')
@@ -356,6 +362,8 @@ def p_normal_1():
 
 
 if __name__ == '__main__':
+    pCls()
+    exit()
     p_no_class()
     p_align()
     p_body()
