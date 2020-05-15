@@ -33,7 +33,7 @@ def pCls():
         if not os.path.exists(title):
             os.mkdir(title)
         with open(title + '.txt', 'w', encoding='utf-8') as fw:
-            driver.get('https://yixueshu.gitee.io/sytnbx/text00025.html')
+            driver.get(link)
             time.sleep(random.randint(1, 5))
 
             # 存源代码
