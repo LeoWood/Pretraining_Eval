@@ -61,6 +61,12 @@ def pCls():
                 ## 去参考文献
                 cite = driver.find_elements_by_xpath('//div[@class="h4" and contains(text(),"参考文献")]')
                 if cite:
+                    try:
+                        go_on = driver.find_element_by_xpath('//button[@onclick="nextPage()"]')
+                        go_on.click()
+                    except:
+                        print(title, 'Done~')
+                        break
                     continue
 
                 # 存正文内容
